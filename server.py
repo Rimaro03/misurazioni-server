@@ -6,21 +6,18 @@ import datetime
 parametri = {
     'user': 'admin',
     'password': '7907',
-    'host': '192.168.5.117',
+    'host': '192.168.1.114',
     'database': 'misurazioni'
 }
 
 try:
     connessione = mysql.connector.connect(**parametri)
     cursore = connessione.cursor(dictionary=True)
-except mysql.connector.Error as err:
-    print(err)
 
-try:
     while True:
         temperatura = random.randint(0, 30)
         umidita = random.randint(0, 100)
-        timestamp = int(datetime.datetime.now().timestamp())
+        timestamp = datetime.datetime.now().timestamp()
 
         query = "INSERT INTO misure (temperatura, umidita, timestamp) VALUES ({}, {}, {})".format(
             temperatura, umidita, timestamp)
