@@ -30,5 +30,3 @@ except mysql.connector.Error as err:
 except KeyboardInterrupt:
     time.sleep(0.1)
     print("Server killed!")
-
-
