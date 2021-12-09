@@ -4,10 +4,10 @@ import random
 import datetime
 
 parametri = {
-    'user': 'admin',
-    'password': '7907',
-    'host': '192.168.1.114',
-    'database': 'misurazioni'
+    'user': '',
+    'password': '',
+    'host': '',
+    'database': ''
 }
 
 try:
